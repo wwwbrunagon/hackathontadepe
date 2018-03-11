@@ -5,13 +5,19 @@
     <title> Ta De Pé </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet"  href="css/style.css" />
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
 </head>
 
 <body>
     <nav class="topbar">
             <div>
                 <a href="#">
-                    <img src="img/logo.png" alt="logotipo do site">
+                    <img src="img/logo.png">
                 </a>          
             </div>
             
@@ -28,43 +34,93 @@
             </div>  
             <div class="midias">
                 <a href="#">
-                <img src="img/midias.png" alt="logotipo do site">
+                <img src="img/midias.png">
                 </a>          
             </div>
     </nav>
 
     <header>
-            <div> 
+    <div class="dados"> 
+        <div style = "margin-right: 50px;"> 
+        <p> Total De Denuncias</p>
+        </div>
+
+        <div> 
+        <p class="dadosborder"> 2352 </p>
+        </div>
+
+        <div>
+        <p> Denuncias Respondidas </p>
+        </div>
+        
+        <div>
+        <p class="dadosborder"> 1352 </p>
+        </div>
+    </div>
+
+        <div class="logar"> 
                 <a class="botao" href="#"> <strong> Login </strong> </a>
-            </div>
+        </div>
     </header>
 
     <main>
-        <section>    
+        <section class="intro">    
         <div class="topo"> 
             
                 <div class="header-brand"> 
                     <div >
                         <a href="#">
-                        <img src="img/logoHeader.png" alt="logotipo do site">
+                        <img src="img/logoHeader.png">
                         </a>          
                     </div>
-    
+                       
                     <div class="cabeca-txt"> 
                         <h1>a cobrança move a obra </h1>
-                        <p>  Fiscalize obras de escolas e creches públicas perto de você e pressione por uma gestão mais eficiente de recursos públicos!</p>  
-                    </div>    
+                        <p class="paragrafo">  Fiscalize obras de escolas e creches públicas perto de você e pressione por uma gestão mais eficiente de recursos públicos!</p>
+                        <p class="cerquilha"> #FIQUENOPÉ     #MINHAFOTOMUDAOMUNDO</p>  
+                    </div>
+                                    
+                    <div class="downloadapp">
+                        <a href="#">
+                        <img src="img/introapp.png" alt="Download App">
+                        </a>          
+                    </div>
+                    
                 </div>
     
                 <div class="header-map"> 
                     <div class="img-mapa">
                         <a href="#">
-                        <img src="img/mapa.jpg" alt="logotipo do site">
+                        <img src="img/mapa.jpg">
                         </a>          
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>
+
+        <!-- FEED BOOTSTRAP -->
+        <section>
+            <div class="timeline-wrapper">
+                <div class="timeline-item">
+                  <div class="facebook">
+                    <div class="header-top"> Escola </div>
+                    <div class="header-left"></div>
+                    <div class="header-right"></div>
+                    <div class="header-bottom"> São Paulo </div>
+                    <div class="subheader-left"></div>
+                    <div class="subheader-right"></div>
+                    <div class="subheader-bottom"> Denuncias </div>
+                    <div class="content-top"> 382726263 </div>
+                    <div class="content-first-end"></div>
+                    <div class="content-second-line"></div>
+                    <div class="content-second-end"></div>
+                    <div class="content-third-line"></div>
+                    <div class="content-third-end"></div>
+                  </div>
+                </div>
+              </div>
+        </section>
+       
     </main>
 
     

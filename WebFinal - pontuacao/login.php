@@ -1,5 +1,6 @@
 <?php
 require("connection.php");
+include("Pontuacao.php");
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
@@ -24,6 +25,7 @@ if(!isset($_POST["email"]) || !isset($_POST["senha"])){
 		$result= $stmt->bind_result($idUsuario);
 		$stmt->fetch();
 		$_SESSION['idAtivo']= $idUsuario;
+		Pontuacao();
 		header("location: index.php");	
 	}
 }

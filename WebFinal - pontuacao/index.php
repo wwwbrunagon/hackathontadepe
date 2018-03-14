@@ -2,11 +2,19 @@
   session_start();
   require("DadosEstatisticas.php");
   require("Erros.php");
+  require("pontuacao.php");
 function FeedAlertas(){
   global $connect;
   $sql="SELECT endereco, cidade, uf, escola, numeroAlertas from alertas";
   return $connect->query($sql);
 }
+if(!isset($_SESSION['idAtivo'])){
+    $_SESSION['pontos']= "";
+    $_SESSION['nick']= "Faça Login";
+}else{
+    Pontuacao();
+}
+
 
 ?>
 <!DOCTYPE html> 
@@ -25,6 +33,10 @@ function FeedAlertas(){
     <style type="text/css">
       .dados p{
         margin-top: 25px;
+      }
+      #linkLogin{
+        text-decoration: none;
+        color: #fff;
       }
       
     </style>
@@ -156,8 +168,8 @@ function FeedAlertas(){
                      <img src="img/pontos.svg">
                 </div>
                 <div>
-                    <var >XX</var>
-                    <label class="text-muted"; style="margin-left: 34%;">Seus Pontos</label>
+                    <var ><?=$_SESSION['pontos']; ?></var>
+                    <label class="text-muted"; style="margin-left: 40%;"><a href="#popup1" id="linkLogin"><?= $_SESSION['nick'];?></a></label>
                 </div>
             </div>
             

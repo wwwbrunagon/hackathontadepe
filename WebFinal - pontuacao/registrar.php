@@ -15,7 +15,7 @@ if(!isset($_POST["email"]) || !isset($_POST["senha"]) || !isset($_POST['nick']) 
 	$pass = hash('sha256', $pass);
 	$nick= $_POST['nick'];
 
-	$stmt = $connect->prepare("INSERT INTO usuario values(null,?,?,?,0)");
+	$stmt = $connect->prepare("INSERT INTO usuario values(null,?,?,?,5)");
 	$stmt->bind_param('sss',$nick,$email,$pass);
 	if(!$stmt->execute()){
 		$_SESSION['erroCadastro']=1;
@@ -23,7 +23,6 @@ if(!isset($_POST["email"]) || !isset($_POST["senha"]) || !isset($_POST['nick']) 
 	}else{
 		$result=$connect->query("SELECT idUser from usuario where email='$email' ");
 		$_SESSION['idAtivo']= $result->fetch_assoc();
-		var_dump($_SESSION['idAtivo']);
-		//header("location: index.php");
+		header("location: index.php");
 	}
 }
